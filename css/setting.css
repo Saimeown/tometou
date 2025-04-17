@@ -1,0 +1,786 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Architects+Daughter&family=Gruppo&family=Inconsolata:wght@200;300;400;500;600&family=Indie+Flower&family=Montserrat:wght@200;400&family=Poppins:wght@200;300;400&family=Press+Start+2P&display=swap');@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Architects+Daughter&family=Gruppo&family=Inconsolata:wght@200;300;400;500;600&family=Indie+Flower&family=Montserrat:wght@200;400&family=Poppins:wght@200;300;400&family=Press+Start+2P&display=swap');
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: repeating-linear-gradient(11deg, rgba(34, 34, 34, 0.25), rgba(255, 255, 255, 0.25) 1px, transparent 0px, transparent 4px);
+    background-size: 8px;
+    background-color: #f3f0cc;
+    scroll-behavior: smooth;
+    transition: background-image 0.5s, color 0.5s; 
+}
+
+body.dark-mode {
+    background-image: repeating-linear-gradient(11deg, rgba(34, 34, 34, 0.25), rgba(0, 0, 0, 0.25) 1px, transparent 0px, transparent 5px);
+    background-color: rgb(37, 37, 37);
+    color: #ffffff;
+}
+
+body.dark-mode .texttitle {
+    color: rgb(255, 255, 255);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 60px;
+    color: black;
+}
+
+.texttitle{
+    margin-top: 2em;
+    color: black;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 30px;
+}
+
+/*----------------------NAV BAR---------------------*/
+nav,
+nav:before,
+nav:after {
+    box-sizing: border-box;
+}
+
+nav {
+    z-index: 1;
+    position: relative;
+    float: left;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: transparent;
+}
+
+nav ul {
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+    position: relative;
+    margin-top: 2em;
+    text-align: center;
+    background-color: #ffa5a5;
+    border-radius: 20px;
+    padding-right: 50px;
+}
+
+nav ul li {
+    list-style: none;
+    margin: -1em auto 1.3em -2.2em;
+    border-radius: 10px;
+    position: relative;
+    width: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .4s ease-out;
+}
+.username{
+    font-family: "Press Start 2P";
+    font-size: 9px; 
+    color: #000000; 
+    margin-left: 5px;
+}
+
+nav ul li:after {
+    font-size: 14px;
+    position: absolute;
+    color: #d87777;
+    font-weight: 800;
+    top: 0;
+    left: 70px;
+    width: 70px;
+    height: 100%;
+    opacity: .5;
+    transform: perspective(400px) rotateY(90deg);
+    transform-origin: 0 100%;
+    transition: all .4s ease-out;
+}
+
+nav ul li:hover:after {
+    background-color: white;
+}
+
+nav ul li>div {
+    display: inline-block;
+    padding: 5px 0;
+    background: transparent;
+}
+
+nav ul li div {
+    position: relative;
+}
+nav .logo-icon {
+    margin-top: 25px;
+    float: center;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px 17px;
+    transition: all .3s ease-out;
+    border: solid black;
+    background-color: #76b476;
+}
+nav .icon {
+    float: center;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: all .3s ease-out;
+    margin-bottom: -10px;
+}
+nav .icon:hover {
+    background-color: rgb(253, 123, 123);
+}
+nav .logo-icon:hover{
+    background-color: #3e743e;
+}
+
+/*---------------------SETTINGS----------------------*/
+#setting{
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+    background-color: rgb(200, 171, 216);
+    text-align: center;
+    width: 50em;
+    padding: 1em;
+}
+.user_th{
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+    font-family: 'Press Start 2P', sans-serif;
+    background: rgba(255, 255, 255, 0.541);
+    color: rgb(0, 0, 0);
+    padding: 15px 50px;
+    text-align: center;
+}
+.user_td{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    background: transparent;
+    color: black;
+    padding:  10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.user_tr{
+    background-color: transparent;
+}
+.user_tr:hover{
+    background-color: rgb(218, 176, 175);
+    transition: 0.3s;
+}
+
+.btn_useraccounts{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    background: rgb(134, 58, 58);
+    margin-left:-5.5em;
+    padding: 13px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+}
+.btn_useraccounts:hover{
+    background-color: rgb(65, 26, 26);
+    color: white;
+    transition: 0.3s;
+}
+/*----------DARK MODE TOGGLE---------*/
+.toggle-wrapper{
+    display: inline-block;
+}
+.toggle-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+ }
+  
+.toggle-wrapper .toggle-slot {
+    position: relative;
+    height: 3em;
+    width: 7em;
+    border: 5px solid #e4e7ec;
+    border-radius: 10em;
+    background-color: white;
+    box-shadow: 0px 10px 25px #e4e7ec;
+    transition: background-color 250ms;
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot {
+    background-color: #374151;
+  }
+  
+  .toggle-button {
+    transform: translate(4.3em, 0.5em);
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    background-color: #ffeccf;
+    box-shadow: inset 0px 0px 0px 4px #ffbb52;
+    transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+    background-color: #7181a0;
+    box-shadow: inset 0px 0px 0px 4px white;
+    transform: translate(0.8em, 0.5em);
+  }
+  
+  .sun-icon {
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    color: #ffbb52;
+  }
+  
+  .sun-icon-wrapper {
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    opacity: 1;
+    transform: translate(-0.9em, -0.35em) rotate(15deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
+    opacity: 0;
+    transform: translate(2em, 2em) rotate(0deg);
+  }
+  
+  .moon-icon {
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    color: white;
+  }
+  
+  .moon-icon-wrapper {
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    opacity: 0;
+    transform: translate(2em, 2em) rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2.5,.46,.71);
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
+    opacity: 1;
+    transform: translate(2.3em, 0.3em) rotate(-15deg);
+  }
+
+/*-----------PROFILE-----------*/
+#profile-icon-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.current-icon{
+    border-radius: 20px;
+    border: 2px solid black;
+    background-color: white;
+    height: 60px;
+    padding: 10px 20px;
+    transition: all .3s ease-out;
+}
+#profile-icon-dropdown{
+    padding: 10px;
+    margin-left: 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(255, 187, 187);
+    color: rgb(0, 0, 0);
+    font-family: "Press Start 2P", sans-serif;
+}
+option{
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(32, 32, 32);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.save-icon{
+    padding: 10px;
+    margin-left: 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(157, 207, 138);
+    color: rgb(0, 0, 0);
+    font-family: "Press Start 2P", sans-serif;
+    transition: all .3s ease-out;
+}
+.save-icon:hover{
+    background-color: rgb(140, 173, 127);
+    color: white;
+    cursor: pointer;
+}
+
+/*------------USERNAME-------------*/
+#random-username{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.current-username{
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 15px;
+    padding: 10px;
+}
+
+#generate-username{
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid rgb(0, 0, 0);
+        background-color: rgb(255, 187, 187);
+        color: rgb(0, 0, 0);
+        font-family: "Press Start 2P", sans-serif;
+        transition: all .3s ease-out;
+}
+#generate-username:hover{
+    background-color: rgb(214, 149, 149);
+    color: white;
+    cursor: pointer;
+}
+
+/*-------------INPUT PASS-------------*/
+.inputpass{
+    font-family: "Poppins", sans-serif;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    transition: all .3s ease-out;
+}
+.inputpass:hover{
+    background-color: #ffa5a5;
+    cursor: pointer;
+}
+.inputpass:focus{
+    outline: none;
+}
+.text-pass{
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 10px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+
+/*---------------------(IPHONE SE)-----------------------*/
+@media screen and (min-width: 200px) and (max-width: 411px) {
+    /*----------------------NAV BAR---------------------*/
+    nav {
+        top: 10px;
+        left: 10px;
+    }
+
+    nav ul {
+        margin-top: 2em;
+        padding-right: 20px;
+    }
+
+    nav ul li {
+        margin: -1em auto 1.3em -2.2em;
+        width: 5px;
+    }
+
+    .username {
+        font-size: 6px;
+        margin-left: 5px;
+    }
+
+    nav ul li>div {
+        padding: 5px 0;
+    }
+
+    nav .logo-icon {
+        margin-top: 25px;
+        height: 23px;
+        padding: 10px 10px;
+    }
+
+    nav .icon {
+        height: 23px;
+        padding: 5px 12px;
+        margin-bottom: -10px;
+    }
+
+    .texttitle{
+        margin-top:6em;
+        font-size: 20px;
+    }
+    /*---------------------SETTINGS----------------------*/
+    #setting{
+        margin-top: 2em;
+        width: 20em;
+        padding: 20px;
+    }
+    .user_th{
+        padding: 15px 15px;
+        font-size: 13px;
+    }
+    .user_td{
+        padding:  10px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .btn_useraccounts{
+        font-size: 12px;
+        margin-left:-5.5em;
+        padding: 13px 30px;
+        border-radius: 30px;
+    }
+    /*-----------PROFILE-----------*/
+    .current-icon{
+        height: 30px;
+        padding: 10px 10px;
+    }
+    #profile-icon-dropdown{
+        padding: 5px;
+        margin-left: 30px;
+    }
+    option{
+        padding:5px;
+    }
+    .save-icon{
+        padding: 10px;
+        margin-left: 15px;
+    }
+    /*------------USERNAME-------------*/
+    .current-username{
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    #generate-username{
+        padding: 5px;
+    }
+
+    /*-------------INPUT PASS-------------*/
+    .inputpass{
+        padding: 5px;
+    }
+    .text-pass{
+        font-size: 10px;
+    }
+
+}
+
+/*---------------------(IPHONE XR)-----------------------*/
+@media screen and (min-width: 412px) and (max-width: 600px) {
+    /*----------------------NAV BAR---------------------*/
+    nav {
+        top: 10px;
+        left: 10px;
+    }
+
+    nav ul {
+        margin-top: 2em;
+        padding-right: 20px;
+    }
+
+    nav ul li {
+        margin: -1em auto 1.3em -2.2em;
+        width: 5px;
+    }
+
+    .username {
+        font-size: 6px;
+        margin-left: 5px;
+    }
+
+    nav ul li>div {
+        padding: 5px 0;
+    }
+
+    nav .logo-icon {
+        margin-top: 25px;
+        height: 23px;
+        padding: 10px 10px;
+    }
+
+    nav .icon {
+        height: 23px;
+        padding: 5px 12px;
+        margin-bottom: -10px;
+    }
+    .texttitle{
+        margin-top:6em;
+        font-size: 20px;
+    }
+    /*---------------------SETTINGS----------------------*/
+    #setting{
+        margin-top: 2em;
+        width: 20em;
+        padding: 20px;
+    }
+    .user_th{
+        padding: 15px 15px;
+        font-size: 13px;
+    }
+    .user_td{
+        padding:  10px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .btn_useraccounts{
+        font-size: 12px;
+        margin-left:-5.5em;
+        padding: 13px 30px;
+        border-radius: 30px;
+    }
+    /*-----------PROFILE-----------*/
+    .current-icon{
+        height: 30px;
+        padding: 10px 10px;
+    }
+    #profile-icon-dropdown{
+        padding: 5px;
+        margin-left: 30px;
+    }
+    option{
+        padding:5px;
+    }
+    .save-icon{
+        padding: 10px;
+        margin-left: 15px;
+    }
+    /*------------USERNAME-------------*/
+    .current-username{
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    #generate-username{
+        padding: 5px;
+    }
+
+    /*-------------INPUT PASS-------------*/
+    .inputpass{
+        padding: 5px;
+    }
+    .text-pass{
+        font-size: 10px;
+    }
+}
+
+/*------------ IPAD MINI ---------------*/
+@media screen and (min-width: 601px) and (max-width: 911px) {
+    /*----------------------NAV BAR---------------------*/
+    nav {
+        top: 10px;
+        left: 10px;
+    }
+
+    nav ul {
+        margin-top: 2em;
+        padding-right: 20px;
+    }
+
+    nav ul li {
+        margin: -1em auto 1.3em -2.2em;
+        width: 5px;
+    }
+
+    .username {
+        font-size: 6px;
+        margin-left: 5px;
+    }
+
+    nav ul li>div {
+        padding: 5px 0;
+    }
+
+    nav .logo-icon {
+        margin-top: 25px;
+        height: 23px;
+        padding: 10px 10px;
+    }
+
+    nav .icon {
+        height: 23px;
+        padding: 5px 12px;
+        margin-bottom: -10px;
+    }
+
+    .texttitle{
+        margin-top: 3em;
+        font-size: 25px;
+    }
+    /*---------------------SETTINGS----------------------*/
+    #setting{
+        margin-top: 2em;
+        width: 30em;
+        padding: 20px;
+    }
+    .user_th{
+        padding: 15px 15px;
+        font-size: 13px;
+    }
+    .user_td{
+        padding:  10px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .btn_useraccounts{
+        font-size: 12px;
+        margin-left:-5.5em;
+        padding: 13px 30px;
+        border-radius: 30px;
+    }
+    /*-----------PROFILE-----------*/
+    .current-icon{
+        height: 30px;
+        padding: 10px 10px;
+    }
+    #profile-icon-dropdown{
+        padding: 5px;
+        margin-left: 30px;
+    }
+    option{
+        padding:5px;
+    }
+    .save-icon{
+        padding: 10px;
+        margin-left: 15px;
+    }
+    /*------------USERNAME-------------*/
+    .current-username{
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    #generate-username{
+        padding: 5px;
+    }
+
+    /*-------------INPUT PASS-------------*/
+    .inputpass{
+        padding: 5px;
+    }
+    .text-pass{
+        font-size: 10px;
+    }
+}
+
+/*------------ SURFACE PRO 7 ---------------*/
+@media screen and (min-width: 912px) and (max-width: 1023px) {
+    /*----------------------NAV BAR---------------------*/
+    nav {
+        top: 10px;
+        left: 10px;
+    }
+
+    nav ul {
+        margin-top: 2em;
+        padding-right: 20px;
+    }
+
+    nav ul li {
+        margin: -1em auto 1.3em -2.2em;
+        width: 5px;
+    }
+
+    .username {
+        font-size: 6px;
+        margin-left: 5px;
+    }
+
+    nav ul li>div {
+        padding: 5px 0;
+    }
+
+    nav .logo-icon {
+        margin-top: 25px;
+        height: 23px;
+        padding: 10px 10px;
+    }
+
+    nav .icon {
+        height: 23px;
+        padding: 5px 12px;
+        margin-bottom: -10px;
+    }
+
+    .texttitle{
+        margin-top: 3em;
+        font-size: 25px;
+    }
+    /*---------------------SETTINGS----------------------*/
+    #setting{
+        margin-top: 2em;
+        width: 30em;
+        padding: 20px;
+    }
+    .user_th{
+        padding: 15px 15px;
+        font-size: 13px;
+    }
+    .user_td{
+        padding:  10px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .btn_useraccounts{
+        font-size: 12px;
+        margin-left:-5.5em;
+        padding: 13px 30px;
+        border-radius: 30px;
+    }
+    /*-----------PROFILE-----------*/
+    .current-icon{
+        height: 30px;
+        padding: 10px 10px;
+    }
+    #profile-icon-dropdown{
+        padding: 5px;
+        margin-left: 30px;
+    }
+    option{
+        padding:5px;
+    }
+    .save-icon{
+        padding: 10px;
+        margin-left: 15px;
+    }
+    /*------------USERNAME-------------*/
+    .current-username{
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    #generate-username{
+        padding: 5px;
+    }
+
+    /*-------------INPUT PASS-------------*/
+    .inputpass{
+        padding: 5px;
+    }
+    .text-pass{
+        font-size: 10px;
+    }
+}
+
+/*-------------------NEST HUB---------------------*/
+@media screen and (min-width: 1024px) and (max-width: 1100px) {}
+
+/*-------------------NEST HUB MAX---------------------*/
+@media screen and (min-width: 1101px) and (max-width: 1500px) {}

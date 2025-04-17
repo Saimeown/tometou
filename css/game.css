@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Architects+Daughter&family=Bungee&family=Carter+One&family=Indie+Flower&family=Luckiest+Guy&family=Montserrat:wght@200;400&family=Poppins:wght@200;300;400&family=Press+Start+2P&display=swap');
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: repeating-linear-gradient(11deg, rgba(34, 34, 34, 0.25), rgba(255, 255, 255, 0.25) 1px, transparent 0px, transparent 4px);
+    background-size: 8px;
+    background-color: #f3f0cc;
+    scroll-behavior: smooth;
+    transition: background-image 0.5s, color 0.5s;
+}
+
+/*---dark mode---*/
+body.dark-mode {
+    background-image: repeating-linear-gradient(11deg, rgba(34, 34, 34, 0.25), rgba(0, 0, 0, 0.25) 1px, transparent 0px, transparent 5px);
+    background-color: rgb(37, 37, 37);
+    color: #ffffff;
+}
+
+body.dark-mode .texttitle {
+    color: rgb(255, 255, 255);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 60px;
+    color: black;
+}
+
+.texttitle {
+    color: black;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 30px;
+}
+
+/*----------------------NAV BAR---------------------*/
+nav,
+nav:before,
+nav:after {
+    box-sizing: border-box;
+}
+
+nav {
+    z-index: 1000;
+    position: relative;
+    float: left;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: transparent;
+}
+
+nav ul {
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+    position: relative;
+    margin-top: 2em;
+    text-align: center;
+    background-color: #ffa5a5;
+    border-radius: 20px;
+    padding-right: 50px;
+}
+
+nav ul li {
+    list-style: none;
+    margin: -1em auto 1.3em -2.2em;
+    border-radius: 10px;
+    position: relative;
+    width: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .4s ease-out;
+}
+
+.username {
+    font-family: "Press Start 2P";
+    font-size: 9px;
+    color: #000000;
+    margin-left: 5px;
+}
+
+nav ul li:after {
+    font-size: 14px;
+    position: absolute;
+    color: #d87777;
+    font-weight: 800;
+    top: 0;
+    left: 70px;
+    width: 70px;
+    height: 100%;
+    opacity: .5;
+    transform: perspective(400px) rotateY(90deg);
+    transform-origin: 0 100%;
+    transition: all .4s ease-out;
+}
+
+nav ul li:hover:after {
+    background-color: white;
+}
+
+nav ul li>div {
+    display: inline-block;
+    padding: 5px 0;
+    background: transparent;
+}
+
+nav ul li div {
+    position: relative;
+}
+
+nav .logo-icon {
+    margin-top: 25px;
+    float: center;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px 17px;
+    transition: all .3s ease-out;
+    border: solid black;
+    background-color: #76b476;
+}
+
+nav .icon {
+    float: center;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: all .3s ease-out;
+    margin-bottom: -10px;
+}
+
+nav .icon:hover {
+    background-color: rgb(253, 123, 123);
+}
+
+nav .logo-icon:hover {
+    background-color: #3e743e;
+}
+
+/*-----------------TETRIS-------------------*/
+#tetris {
+    top: 4em;
+    left: 25%;
+    width: 40em;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(221, 173, 236);
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+
+}
+
+#canvas {
+    border-radius: 10px;
+    width: 200px;
+    height: 440px;
+    background-color: #414141;
+    position: relative;
+    color: #fff;
+    border: 1px solid black;
+
+}
+
+#canvas h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 200px;
+}
+
+.piece {
+    border: 1px solid rgb(0, 0, 0);
+    position: absolute;
+}
+
+.square {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.type0 {
+    background-color: #bc87d6;
+}
+
+.type1 {
+    background-color: #95b4dd;
+}
+
+.type2 {
+    background-color: #e6ca94;
+}
+
+.type3 {
+    background-color: #9494da;
+}
+
+.type4 {
+    background-color: #82da82;
+}
+
+.type5 {
+    background-color: #eba2a2;
+}
+
+.type6 {
+    background-color: #e4e497;
+}
+
+#next_shape {
+    position: relative;
+    background-color: #000;
+    border: 1px solid white;
+    width: 110px;
+    height: 110px;
+}
+
+#info {
+    font-family: "Press Start 2P", sans-serif;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    float: right;
+    width: 110px;
+    height: 420px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.arrow-row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.arrow {
+    padding: 10px;
+    background-color: pink;
+    border-radius: 4px;
+    color: black;
+    border: 1px solid black;
+    box-shadow: 4px 4px black;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+#arrow-buttons {
+    border-radius: 10px;
+    border: 3px solid;
+    position: relative;
+    padding: 10px;
+}
+
+#left-btn {
+    padding: 13px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    color: black;
+    border: 1px solid black;
+    box-shadow: 4px 4px black;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+#left-btn:hover {
+    background-color: rgb(88, 79, 81);
+}
+
+#right-btn {
+    padding: 13px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    color: black;
+    border: 1px solid black;
+    box-shadow: 4px 4px black;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+#right-btn:hover {
+    background-color: rgb(88, 79, 81);
+}
+
+#up-btn {
+    padding: 13px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    color: black;
+    border: 1px solid black;
+    box-shadow: 4px 4px black;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+#up-btn:hover {
+    background-color: rgb(88, 79, 81);
+}
+
+#down-btn {
+    padding: 13px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    color: black;
+    border: 1px solid black;
+    box-shadow: 4px 4px black;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+#down-btn:hover {
+    background-color: rgb(88, 79, 81);
+}
+
+#restart-btn {
+    background-color: rgb(255, 93, 93);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Press Start 2P", sans-serif;
+    transition: all .2s ease-out;
+}
+
+#restart-btn:hover {
+    background-color: #b84a4a;
+}
+
+/*---------------------(IPHONE SE)-----------------------*/
+@media screen and (min-width: 200px) and (max-width: 411px) {
+
+    /*----------------------NAV BAR---------------------*/
+    nav {
+        top: 10px;
+        left: 10px;
+    }
+
+    nav ul {
+        margin-top: 2em;
+        padding-right: 20px;
+    }
+
+    nav ul li {
+        margin: -1em auto 1.3em -2.2em;
+        width: 5px;
+    }
+
+    .username {
+        font-size: 6px;
+        margin-left: 5px;
+    }
+
+    nav ul li>div {
+        padding: 5px 0;
+    }
+
+    nav .logo-icon {
+        margin-top: 25px;
+        height: 23px;
+        padding: 10px 10px;
+    }
+
+    nav .icon {
+        height: 23px;
+        padding: 5px 12px;
+        margin-bottom: -10px;
+    }
+}
+
+/*---------------------(IPHONE XR)-----------------------*/
+@media screen and (min-width: 412px) and (max-width: 600px) {
+
+    /*----------------------NAV BAR---------------------*/
+    nav {
+        top: 10px;
+        left: 10px;
+    }
+
+    nav ul {
+        margin-top: 2em;
+        padding-right: 20px;
+    }
+
+    nav ul li {
+        margin: -1em auto 1.3em -2.2em;
+        width: 5px;
+    }
+
+    .username {
+        font-size: 6px;
+        margin-left: 5px;
+    }
+
+    nav ul li>div {
+        padding: 5px 0;
+    }
+
+    nav .logo-icon {
+        margin-top: 25px;
+        height: 23px;
+        padding: 10px 10px;
+    }
+
+    nav .icon {
+        height: 23px;
+        padding: 5px 12px;
+        margin-bottom: -10px;
+    }
+
+}
+
+/*------------ IPAD MINI ---------------*/
+@media screen and (min-width: 601px) and (max-width: 911px) {
+
+    /*----------------------NAV BAR---------------------*/
+    nav {
+        top: 10px;
+        left: 10px;
+    }
+
+    nav ul {
+        margin-top: 2em;
+        padding-right: 20px;
+    }
+
+    nav ul li {
+        margin: -1em auto 1.3em -2.2em;
+        width: 5px;
+    }
+
+    .username {
+        font-size: 6px;
+        margin-left: 5px;
+    }
+
+    nav ul li>div {
+        padding: 5px 0;
+    }
+
+    nav .logo-icon {
+        margin-top: 25px;
+        height: 23px;
+        padding: 10px 10px;
+    }
+
+    nav .icon {
+        height: 23px;
+        padding: 5px 12px;
+        margin-bottom: -10px;
+    }
+
+}
+
+/*------------ SURFACE PRO 7 ---------------*/
+@media screen and (min-width: 912px) and (max-width: 1023px) {
+
+    /*----------------------NAV BAR---------------------*/
+    nav {
+        top: 10px;
+        left: 10px;
+    }
+
+    nav ul {
+        margin-top: 2em;
+        padding-right: 20px;
+    }
+
+    nav ul li {
+        margin: -1em auto 1.3em -2.2em;
+        width: 5px;
+    }
+
+    .username {
+        font-size: 6px;
+        margin-left: 5px;
+    }
+
+    nav ul li>div {
+        padding: 5px 0;
+    }
+
+    nav .logo-icon {
+        margin-top: 25px;
+        height: 23px;
+        padding: 10px 10px;
+    }
+
+    nav .icon {
+        height: 23px;
+        padding: 5px 12px;
+        margin-bottom: -10px;
+    }
+}
+
+/*-------------------NEST HUB---------------------*/
+@media screen and (min-width: 1024px) and (max-width: 1100px) {}
+
+/*-------------------NEST HUB MAX---------------------*/
+@media screen and (min-width: 1101px) and (max-width: 1500px) {}

@@ -1,0 +1,1283 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Architects+Daughter&family=Bungee&family=Carter+One&family=Indie+Flower&family=Luckiest+Guy&family=Montserrat:wght@200;400&family=Poppins:wght@200;300;400&family=Press+Start+2P&display=swap');
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: repeating-linear-gradient(11deg, rgba(34, 34, 34, 0.25), rgba(255, 255, 255, 0.25) 1px, transparent 0px, transparent 4px);
+    background-size: 8px;
+    background-color: #f3f0cc;
+    scroll-behavior: smooth;
+    transition: background-image 0.5s, color 0.5s;
+}
+
+/*---dark mode---*/
+body.dark-mode {
+    background-image: repeating-linear-gradient(11deg, rgba(34, 34, 34, 0.25), rgba(0, 0, 0, 0.25) 1px, transparent 0px, transparent 5px);
+    background-color: rgb(37, 37, 37);
+    color: #ffffff;
+}
+
+body.dark-mode .texttitle {
+    color: rgb(255, 255, 255);
+}
+
+body.dark-mode #edittitle {
+    color: rgb(255, 255, 255);
+}
+
+body.dark-mode .user_td {
+    color: rgb(255, 255, 255);
+}
+
+body.dark-mode .user_th {
+    background-color: #d87777;
+}
+
+body.dark-mode .about-label {
+    color: rgb(255, 255, 255);
+}
+
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 60px;
+    color: black;
+}
+
+.texttitle {
+    color: black;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 30px;
+}
+
+/*----------------------NAV BAR---------------------*/
+nav,
+nav:before,
+nav:after {
+    box-sizing: border-box;
+}
+
+nav {
+    z-index: 1000;
+    position: relative;
+    float: left;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: transparent;
+}
+
+nav ul {
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+    position: relative;
+    margin-top: 2em;
+    text-align: center;
+    background-color: #ffa5a5;
+    border-radius: 20px;
+    padding-right: 50px;
+}
+
+nav ul li {
+    list-style: none;
+    margin: -1em auto 1.3em -2.2em;
+    border-radius: 10px;
+    position: relative;
+    width: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .4s ease-out;
+}
+
+.username {
+    font-family: "Press Start 2P";
+    font-size: 9px;
+    color: #000000;
+    margin-left: 5px;
+}
+
+nav ul li:after {
+    font-size: 14px;
+    position: absolute;
+    color: #d87777;
+    font-weight: 800;
+    top: 0;
+    left: 70px;
+    width: 70px;
+    height: 100%;
+    opacity: .5;
+    transform: perspective(400px) rotateY(90deg);
+    transform-origin: 0 100%;
+    transition: all .4s ease-out;
+}
+
+nav ul li:hover:after {
+    background-color: white;
+}
+
+nav ul li>div {
+    display: inline-block;
+    padding: 5px 0;
+    background: transparent;
+}
+
+nav ul li div {
+    position: relative;
+}
+
+nav .logo-icon {
+    margin-top: 25px;
+    float: center;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px 17px;
+    transition: all .3s ease-out;
+    border: solid black;
+    background-color: #76b476;
+}
+
+nav .icon {
+    float: center;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: all .3s ease-out;
+    margin-bottom: -10px;
+}
+
+nav .icon:hover {
+    background-color: rgb(253, 123, 123);
+}
+
+nav .logo-icon:hover {
+    background-color: #3e743e;
+}
+
+/*-------------------SEARCH BAR---------------------*/
+
+.container-input {
+    margin-top: 4em;
+    position: fixed;
+    z-index: 10;
+}
+
+.input {
+    border-radius: 50px;
+    border: 2px solid rgb(255, 144, 144);
+    box-shadow: 4px 4px rgb(255, 164, 164);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    width: 350px;
+    height: 30px;
+    padding: 10px 0px 10px 40px;
+    transition: all .2s ease-in-out;
+    outline: none;
+}
+
+.container-input svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+}
+
+.input:focus {
+    opacity: 1;
+    width: 400px;
+}
+
+/*-------------SUBMIT POST BUTTON-------------*/
+.submitbutton {
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+    margin: 50px auto 10px auto;
+    padding: 1.3em 3em;
+    font-size: 17px;
+    font-family: "Press Start 2P", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #ffffff;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.submitbutton:hover {
+    background-color: #ffa5a5;
+    transform: translateY(-7px);
+    color: #ffffff;
+}
+
+.submitbutton:active {
+    transform: translateY(-1px);
+}
+
+/*-------------SUBMIT NOTE------------*/
+.notes {
+    margin: 0;
+    padding: 0;
+}
+
+.notes h2 {
+    padding-left: 10px;
+    font-size: 35px;
+    font-family: "Architects Daughter", sans-serif;
+    font-weight: 300;
+}
+
+.notes p {
+    font-family: "Architects Daughter", sans-serif;
+    font-size: 20px;
+}
+
+.notes ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.notes ul li a {
+    text-decoration: none;
+    color: #000;
+    background: #ffc;
+    display: block;
+    height: 30em;
+    width: 25em;
+    padding: 1em;
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+    /*transform: rotate(-6deg);
+    transition: transform .15s linear; */
+}
+
+.notes ul li a:hover,
+ul li a:focus {
+    position: relative;
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+    /* transform: scale(1.25); */
+    z-index: 5;
+}
+
+.notes ul li {
+    margin: 1em;
+    list-style: none;
+}
+
+.notes input {
+    font-family: "Architects Daughter", sans-serif;
+    background-color: transparent;
+    position: relative;
+    border: none;
+    font-size: 35px;
+    width: 9em;
+}
+
+.notes input:focus {
+    outline: none;
+}
+
+textarea {
+    font-family: "Architects Daughter", sans-serif;
+    background-color: transparent;
+    position: relative;
+    font-size: 30px;
+    margin-left: 30px;
+    width: 9.6em;
+    height: 9.5em;
+    border: none;
+    resize: none;
+    overflow-wrap: break-word;
+}
+
+textarea {
+    outline: none;
+}
+
+#submit {
+    text-align: right;
+    font-family: "Architects Daughter", sans-serif;
+    font-size: 30px;
+    width: 12em;
+    height: 35px;
+    border: none;
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    margin-left: 1em;
+}
+
+#submit:hover {
+    color: rgb(250, 75, 75);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/*--------------SUBMISSIONS---------------*/
+
+.sub {
+    margin: 0;
+    padding: 0;
+}
+
+.sub h2 {
+    font-size: 25px;
+    font-family: "Architects Daughter", sans-serif;
+    font-weight: 100;
+}
+
+.sub p {
+    font-family: "Architects Daughter", sans-serif;
+    font-size: 18px;
+}
+
+.sub ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sub ul li a {
+    margin-right: 1em;
+    text-decoration: none;
+    color: #000;
+    background: #ffc;
+    display: block;
+    height: 23em;
+    width: 25em;
+    padding: 1em;
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+    transform: rotate(-6deg);
+    transition: transform .15s linear;
+}
+
+/*
+.sub ul li a:hover, ul li a:focus {
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+    transform: scale(1.25);
+    position: relative;
+    z-index: 5;
+}
+*/
+
+.sub ul li:nth-child(even) a {
+    transform: rotate(4deg);
+    position: relative;
+    top: 5px;
+    background: #F4C5CC;
+}
+
+.sub ul li:nth-child(4n) a {
+    transform: rotate(-3deg);
+    position: relative;
+    top: -5px;
+    background: #DDE9F1;
+}
+
+.sub ul li:nth-child(5n) a {
+    transform: rotate(4deg);
+    position: relative;
+    top: -10px;
+    background: #ccf;
+}
+
+.sub ul li:nth-child(6n) a {
+    transform: rotate(-4deg);
+    position: relative;
+    top: -10px;
+    background: rgb(202, 250, 202);
+}
+
+/*
+.sub ul li a:hover, ul li a:focus {
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+    transform: scale(1.25);
+    position: relative;
+    z-index: 5;
+}
+*/
+
+.sub ul li {
+    margin: 1em;
+    list-style: none;
+}
+
+.pin {
+    background-color: #aaa;
+    display: block;
+    height: 32px;
+    width: 2px;
+    position: absolute;
+    left: 50%;
+    top: -16px;
+    z-index: 1;
+}
+
+.pin:after {
+    background-color: #A31;
+    background-image: radial-gradient(25% 25%, circle, hsla(0, 0%, 100%, .3), hsla(0, 0%, 0%, .3));
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px hsla(0, 0%, 0%, .1), inset 3px 3px 3px hsla(0, 0%, 100%, .2), inset -3px -3px 3px hsla(0, 0%, 0%, .2), 23px 20px 3px hsla(0, 0%, 0%, .15);
+    content: '';
+    height: 12px;
+    left: -5px;
+    position: absolute;
+    top: -10px;
+    width: 12px;
+}
+
+.pin:before {
+    background-color: hsla(0, 0%, 0%, 0.1);
+    box-shadow: 0 0 .25em hsla(0, 0%, 0%, .1);
+    content: '';
+
+    height: 24px;
+    width: 2px;
+    left: 0;
+    position: absolute;
+    top: 8px;
+
+    transform: rotate(57.5deg);
+    -moz-transform: rotate(57.5deg);
+    -webkit-transform: rotate(57.5deg);
+    -o-transform: rotate(57.5deg);
+    -ms-transform: rotate(57.5deg);
+
+    transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+}
+
+.to_whom {
+    word-break: break-all;
+}
+
+.profile-icon {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: -2em;
+    border: solid rgb(201, 56, 56);
+}
+
+.fromuser {
+    margin-top: -2em;
+    border: none;
+    margin-left: 45px;
+}
+
+.postmessage {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    word-break: break-all;
+}
+
+.dateposted {
+    text-align: right;
+    border-bottom: 1px solid rgb(255, 91, 91);
+    margin-top: -1.5em;
+}
+
+/*------------------DELETE BUTTON--------------*/
+.delete-button {
+    border-radius: 50px;
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+    background-color: rgb(247, 69, 69);
+    font-family: 'Architects Daughter', sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 3px 15px;
+    margin-left: 21em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    transition: all .2s ease-out;
+}
+
+.delete-button:hover {
+    background-color: rgb(139, 42, 42);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+
+/*---------------LANDING CRUD-----------------*/
+#edittitle {
+    font-family: 'Press Start 2P', sans-serif;
+    color: #000000;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    padding: 5px;
+}
+
+label {
+    font-family: 'Press Start 2P', sans-serif;
+    color: #000000;
+    font-size: 15px;
+}
+
+#about {
+    width: 70em;
+    height: 30em;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    padding: 10px;
+    background-color: rgb(245, 245, 187);
+    border: none;
+    transition: all 0.4s ease-out;
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+}
+
+#about:hover {
+    background-color: rgb(228, 219, 252);
+}
+
+#about:focus {
+    outline: none;
+    background-color: rgb(228, 219, 252);
+}
+
+.about-label {
+    margin: 20px 0px 10px 0px;
+    font-size: 20px;
+}
+
+#terms {
+    width: 70em;
+    height: 30em;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    padding: 10px;
+    background-color: rgb(245, 245, 187);
+    border: none;
+    transition: all 0.4s ease-out;
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+}
+
+#terms:hover {
+    background-color: rgb(228, 219, 252);
+}
+
+#terms:focus {
+    outline: none;
+    background-color: rgb(228, 219, 252);
+}
+
+#submitbutton1 {
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+    margin: 50px auto 10px auto;
+    padding: 1.3em 3em;
+    font-size: 17px;
+    font-family: "Press Start 2P", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #ffffff;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+#submitbutton1:hover {
+    background-color: #ffa5a5;
+    transform: translateY(-7px);
+    color: #ffffff;
+}
+
+#submitbutton1:active {
+    transform: translateY(-1px);
+}
+
+/*----------USER ACCOUNTS-----------*/
+.user_table {
+    text-align: center;
+    padding: 2px;
+    background: transparent;
+}
+
+.user_th {
+    font-family: 'Press Start 2P', sans-serif;
+    background: rgba(214, 136, 136, 0.459);
+    color: rgb(0, 0, 0);
+    padding: 15px 50px;
+    text-align: center;
+    border: solid black;
+}
+
+.user_td {
+    color: black;
+    padding: 2px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.user_tr {
+    background-color: rgba(236, 204, 204, 0);
+}
+
+.user_tr:hover {
+    background-color: rgb(188, 226, 157);
+    transition: 0.3s;
+}
+
+/*----- toggle button ------*/
+
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: white;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    right: 0.3em;
+    bottom: 0.3em;
+    transform: translateX(150%);
+    background-color: #60dd26;
+    border-radius: inherit;
+    transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.slider:after {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    left: 0.3em;
+    bottom: 0.3em;
+    background-color: #d81c1c;
+    border-radius: inherit;
+    transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.switch input:focus+.slider {
+    box-shadow: 0 0 1px #59d102;
+}
+
+.switch input:checked+.slider:before {
+    transform: translateY(0);
+}
+
+.switch input:checked+.slider::after {
+    transform: translateX(-150%);
+}
+
+/*------------------ EDIT DEVELOPERS SECTION ---------------------*/
+#edit-team {
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+    background-color: rgb(200, 171, 216);
+    text-align: center;
+    width: 50em;
+    padding: 1em;
+}
+
+.edit-th {
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+    font-family: 'Press Start 2P', sans-serif;
+    background: rgba(255, 255, 255, 0.541);
+    color: rgb(0, 0, 0);
+    padding: 15px 50px;
+    text-align: center;
+}
+
+.edit-td {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    background: transparent;
+    color: black;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.text-input {
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 10px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.edit-input {
+    font-family: "Poppins", sans-serif;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    transition: all .3s ease-out;
+}
+
+.edit-input:hover {
+    background-color: #ffa5a5;
+    cursor: pointer;
+}
+
+.edit-input:focus {
+    outline: none;
+}
+
+.choose {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(255, 187, 187);
+    color: rgb(0, 0, 0);
+    font-family: "Press Start 2P", sans-serif;
+    transition: all .3s ease-out;
+}
+
+.choose:hover {
+    background-color: rgb(214, 149, 149);
+    color: white;
+    cursor: pointer;
+}
+
+.save-icon {
+    padding: 10px;
+    margin-left: 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(157, 207, 138);
+    color: rgb(0, 0, 0);
+    font-family: "Press Start 2P", sans-serif;
+    transition: all .3s ease-out;
+}
+
+.save-icon:hover {
+    background-color: rgb(140, 173, 127);
+    color: white;
+    cursor: pointer;
+}
+
+.delete-icon {
+    padding: 10px;
+    margin-left: 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(236, 94, 94);
+    color: rgb(0, 0, 0);
+    font-family: "Press Start 2P", sans-serif;
+    transition: all .3s ease-out;
+}
+
+.delete-icon:hover {
+    background-color: rgb(199, 60, 60);
+    color: white;
+    cursor: pointer;
+}
+
+/*---------------------(IPHONE SE)-----------------------*/
+@media screen and (min-width: 200px) and (max-width: 411px) {
+    /*----------------------NAV BAR---------------------*/
+    nav {
+        top: 10px;
+        left: 10px;
+    }
+
+    nav ul {
+        margin-top: 2em;
+        padding-right: 20px;
+    }
+
+    nav ul li {
+        margin: -1em auto 1.3em -2.2em;
+        width: 5px;
+    }
+
+    .username {
+        font-size: 6px;
+        margin-left: 5px;
+    }
+
+    nav ul li>div {
+        padding: 5px 0;
+    }
+
+    nav .logo-icon {
+        margin-top: 25px;
+        height: 23px;
+        padding: 10px 10px;
+    }
+
+    nav .icon {
+        height: 23px;
+        padding: 5px 12px;
+        margin-bottom: -10px;
+    }
+
+    /*------------------SEARCH BAR----------------*/
+    .input {
+        font-size: 15px;
+        width: 170px;
+        height: 15px;
+        padding: 10px 0px 10px 40px;
+    }
+
+    .input:focus {
+        width: 190px;
+    }
+
+    /*-------------SUBMIT POST BUTTON-------------*/
+    .submitbutton {
+        margin: 30px auto 10px auto;
+        padding: 1.3em 2em;
+        font-size: 10px;
+        letter-spacing: 2.5px;
+    }
+    /*--------------SUBMISSIONS---------------*/
+    .sub h2 {
+        font-size: 14px;
+    }
+
+    .sub p {
+        font-size: 10px;
+    }
+
+    .sub ul li a {
+        margin-right: 1em;
+        height: 14em;
+        width: 14em;
+        padding: 1em;
+    }
+
+    .sub ul li {
+        margin: 1em;
+    }
+
+    .pin {
+        height: 32px;
+        width: 2px;
+        left: 50%;
+        top: -16px;
+    }
+    .profile-icon {
+        width: auto;
+        height: 1em;
+        margin-right: 5px;
+        margin-top: -2em;
+        border: 1px solid rgb(201, 56, 56);
+    }
+    .fromuser {
+        margin-top: -2em;
+        margin-left: 23px;
+    }
+
+    .postmessage {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+    }
+
+    .dateposted {
+        margin-top: -1.5em;
+    }
+    /*--------------DELETE BUTTON---------------*/
+    .delete-button{
+        padding: 3px 10px;
+        margin-left: 25em;
+        font-size: 7px;
+        border: 1px solid black;
+        box-shadow: 2px 2px black;
+        background-color: rgb(247, 69, 69); 
+    }
+}
+
+/*---------------------(IPHONE XR)-----------------------*/
+@media screen and (min-width: 412px) and (max-width: 600px) {
+    /*----------------------NAV BAR---------------------*/
+    nav {
+        top: 10px;
+        left: 10px;
+    }
+
+    nav ul {
+        margin-top: 2em;
+        padding-right: 20px;
+    }
+
+    nav ul li {
+        margin: -1em auto 1.3em -2.2em;
+        width: 5px;
+    }
+
+    .username {
+        font-size: 6px;
+        margin-left: 5px;
+    }
+
+    nav ul li>div {
+        padding: 5px 0;
+    }
+
+    nav .logo-icon {
+        margin-top: 25px;
+        height: 23px;
+        padding: 10px 10px;
+    }
+
+    nav .icon {
+        height: 23px;
+        padding: 5px 12px;
+        margin-bottom: -10px;
+    }
+
+    /*------------------SEARCH BAR----------------*/
+    .input {
+        font-size: 15px;
+        width: 190px;
+        height: 15px;
+        padding: 10px 0px 10px 40px;
+    }
+
+    .input:focus {
+        width: 200px;
+    }
+
+    /*-------------SUBMIT POST BUTTON-------------*/
+    .submitbutton {
+        margin: 25px auto 10px auto;
+        padding: 1.5em 2em;
+        font-size: 10px;
+        letter-spacing: 2.5px;
+    }
+    /*--------------SUBMISSIONS---------------*/
+    .sub h2 {
+        font-size: 16px;
+    }
+
+    .sub p {
+        font-size: 12px;
+    }
+
+    .sub ul li a {
+        margin-right: 1em;
+        height: 16em;
+        width: 16em;
+        padding: 1em;
+    }
+
+    .sub ul li {
+        margin: 1em;
+    }
+
+    .pin {
+        height: 32px;
+        width: 2px;
+        left: 50%;
+        top: -16px;
+    }
+    .profile-icon {
+        width: auto;
+        height: 1.2em;
+        margin-right: 5px;
+        margin-top: -2em;
+        border: 1.4px solid rgb(201, 56, 56);
+    }
+    .fromuser {
+        margin-top: -2em;
+        margin-left: 27px;
+    }
+
+    .postmessage {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+    }
+
+    .dateposted {
+        margin-top: -1.5em;
+    }
+    /*--------------DELETE BUTTON---------------*/
+    .delete-button{
+        padding: 3px 10px;
+        margin-left: 20em;
+        font-size: 10px;
+        border: 1px solid black;
+        box-shadow: 2px 2px black;
+        background-color: rgb(247, 69, 69); 
+    }
+}
+
+/*------------ IPAD MINI ---------------*/
+@media screen and (min-width: 601px) and (max-width: 911px) {
+    /*----------------------NAV BAR---------------------*/
+    nav {
+        top: 10px;
+        left: 10px;
+    }
+
+    nav ul {
+        margin-top: 2em;
+        padding-right: 20px;
+    }
+
+    nav ul li {
+        margin: -1em auto 1.3em -2.2em;
+        width: 5px;
+    }
+
+    .username {
+        font-size: 6px;
+        margin-left: 5px;
+    }
+
+    nav ul li>div {
+        padding: 5px 0;
+    }
+
+    nav .logo-icon {
+        margin-top: 25px;
+        height: 23px;
+        padding: 10px 10px;
+    }
+
+    nav .icon {
+        height: 23px;
+        padding: 5px 12px;
+        margin-bottom: -10px;
+    }
+
+    /*------------------SEARCH BAR----------------*/
+    .input {
+        font-size: 15px;
+        width: 190px;
+        height: 15px;
+        padding: 10px 0px 10px 40px;
+    }
+
+    .input:focus {
+        width: 200px;
+    }
+
+    /*-------------SUBMIT POST BUTTON-------------*/
+    .submitbutton {
+        margin: 25px auto 10px auto;
+        padding: 1.5em 2em;
+        font-size: 10px;
+        letter-spacing: 2.5px;
+    }
+    /*--------------SUBMISSIONS---------------*/
+    .sub h2 {
+        font-size: 16px;
+    }
+
+    .sub p {
+        font-size: 12px;
+    }
+
+    .sub ul li a {
+        margin-right: 1em;
+        height: 16em;
+        width: 16em;
+        padding: 1em;
+    }
+
+    .sub ul li {
+        margin: 1em;
+    }
+
+    .pin {
+        height: 32px;
+        width: 2px;
+        left: 50%;
+        top: -16px;
+    }
+    .profile-icon {
+        width: auto;
+        height: 1.2em;
+        margin-right: 5px;
+        margin-top: -2em;
+        border: 1.4px solid rgb(201, 56, 56);
+    }
+    .fromuser {
+        margin-top: -2em;
+        margin-left: 27px;
+    }
+
+    .postmessage {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+    }
+
+    .dateposted {
+        margin-top: -1.5em;
+    }
+    /*--------------DELETE BUTTON---------------*/
+    .delete-button{
+        padding: 3px 10px;
+        margin-left: 20em;
+        font-size: 10px;
+        border: 1px solid black;
+        box-shadow: 2px 2px black;
+        background-color: rgb(247, 69, 69); 
+    }
+}
+
+/*------------ SURFACE PRO 7 ---------------*/
+@media screen and (min-width: 912px) and (max-width: 1023px) {
+    /*----------------------NAV BAR---------------------*/
+    nav {
+        top: 10px;
+        left: 10px;
+    }
+
+    nav ul {
+        margin-top: 2em;
+        padding-right: 20px;
+    }
+
+    nav ul li {
+        margin: -1em auto 1.3em -2.2em;
+        width: 5px;
+    }
+
+    .username {
+        font-size: 6px;
+        margin-left: 5px;
+    }
+
+    nav ul li>div {
+        padding: 5px 0;
+    }
+
+    nav .logo-icon {
+        margin-top: 25px;
+        height: 23px;
+        padding: 10px 10px;
+    }
+
+    nav .icon {
+        height: 23px;
+        padding: 5px 12px;
+        margin-bottom: -10px;
+    }
+
+    /*------------------SEARCH BAR----------------*/
+    .input {
+        font-size: 15px;
+        width: 190px;
+        height: 15px;
+        padding: 10px 0px 10px 40px;
+    }
+
+    .input:focus {
+        width: 200px;
+    }
+
+    /*-------------SUBMIT POST BUTTON-------------*/
+    .submitbutton {
+        margin: 25px auto 10px auto;
+        padding: 1.5em 2em;
+        font-size: 10px;
+        letter-spacing: 2.5px;
+    }
+    /*--------------SUBMISSIONS---------------*/
+    .sub h2 {
+        font-size: 16px;
+    }
+
+    .sub p {
+        font-size: 12px;
+    }
+
+    .sub ul li a {
+        margin-right: 1em;
+        height: 16em;
+        width: 16em;
+        padding: 1em;
+    }
+
+    .sub ul li {
+        margin: 1em;
+    }
+
+    .pin {
+        height: 32px;
+        width: 2px;
+        left: 50%;
+        top: -16px;
+    }
+    .profile-icon {
+        width: auto;
+        height: 1.2em;
+        margin-right: 5px;
+        margin-top: -2em;
+        border: 1.4px solid rgb(201, 56, 56);
+    }
+    .fromuser {
+        margin-top: -2em;
+        margin-left: 27px;
+    }
+
+    .postmessage {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+    }
+
+    .dateposted {
+        margin-top: -1.5em;
+    }
+    /*--------------DELETE BUTTON---------------*/
+    .delete-button{
+        padding: 3px 10px;
+        margin-left: 20em;
+        font-size: 10px;
+        border: 1px solid black;
+        box-shadow: 2px 2px black;
+        background-color: rgb(247, 69, 69); 
+    }
+}
+
+/*-------------------NEST HUB---------------------*/
+@media screen and (min-width: 1024px) and (max-width: 1100px) {}
+
+/*-------------------NEST HUB MAX---------------------*/
+@media screen and (min-width: 1101px) and (max-width: 1500px) {}
