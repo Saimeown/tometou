@@ -33,7 +33,7 @@ Tometou is a web-based platform that allows users to share anonymous messages in
 - **Contact Information**: Team member profiles with social media links
 - **Responsive Design**: Works seamlessly across devices
 
-## 🛠Technology Stack
+## Technology Stack
 
 - **Frontend**: HTML5, CSS3, JavaScript
 - **Backend**: PHP 7.4+
@@ -104,7 +104,7 @@ Tometou/
    - Start Apache and MySQL in XAMPP
    - Navigate to `http://localhost/Tometou/tometou.php`
 
-## 🗄️ Database Schema
+## Database Schema
 
 ### user_accounts
 - `USER_ID` (INT, PRIMARY KEY, AUTO_INCREMENT)
