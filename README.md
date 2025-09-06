@@ -1,17 +1,17 @@
-# Tometou 🍅
+# Tometou 
 **An Anonymous Message Collection Website**
 
 *"To me, to you" - Share your thoughts anonymously*
 
 ---
 
-## 📖 Overview
+## Overview
 
 Tometou is a web-based platform that allows users to share anonymous messages in a visually appealing, letter-inspired interface. The name "Tometou" comes from "To me, to you," reflecting the core purpose of the platform - facilitating anonymous communication between users.
 
-## ✨ Features
+## Features
 
-### 🔐 User Features
+### User Features
 - **Anonymous Messaging**: Send and receive messages without revealing your identity
 - **User Registration & Authentication**: Secure account creation with email verification
 - **Profile Customization**: Choose from 16 different profile icons
@@ -20,20 +20,20 @@ Tometou is a web-based platform that allows users to share anonymous messages in
 - **Message Management**: View, post, and delete your own messages
 - **Guest Browsing**: Browse public messages without registration
 
-### 👨‍💼 Admin Features
+### Admin Features
 - **User Account Management**: View and manage all user accounts
 - **Content Moderation**: Activate/deactivate posts and users
 - **Developer Section Management**: Add, update, or remove team member information
 - **Landing Page Customization**: Edit about section content
 - **Admin Dashboard**: Comprehensive overview of platform activity
 
-### 🎮 Additional Features
+### Additional Features
 - **Games Section**: Built-in games for user entertainment
 - **Terms & Conditions**: Legal compliance and user guidelines
 - **Contact Information**: Team member profiles with social media links
 - **Responsive Design**: Works seamlessly across devices
 
-## 🛠️ Technology Stack
+## 🛠Technology Stack
 
 - **Frontend**: HTML5, CSS3, JavaScript
 - **Backend**: PHP 7.4+
@@ -70,7 +70,7 @@ Tometou/
 └── uploads/               # User uploaded content
 ```
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 - XAMPP or similar LAMP/WAMP stack
@@ -133,7 +133,7 @@ Tometou/
 - `ig` (VARCHAR)
 - `gm` (VARCHAR)
 
-## 🎯 Usage
+## Usage
 
 ### For Users:
 1. **Registration**: Create an account with email and password
@@ -149,7 +149,7 @@ Tometou/
 3. **Moderate Content**: Review and manage posts
 4. **Update Content**: Edit the about section and team information
 
-## 🔒 Security Features
+## Security Features
 
 - **Password Hashing**: Passwords are encrypted using PHP's `password_hash()`
 - **SQL Injection Prevention**: Prepared statements used throughout
@@ -157,7 +157,7 @@ Tometou/
 - **Session Management**: Secure session handling for authentication
 - **Status Control**: Admin can deactivate problematic users/posts
 
-## 🎨 Customization
+## Customization
 
 ### Profile Icons
 - 16 unique profile icons available in `/images/profile/`
@@ -169,7 +169,7 @@ Tometou/
 - Theme preference stored in localStorage
 - CSS variables for easy color customization
 
-## 🤝 Contributing
+## Contributing
 
 The Tometou project was developed by a team of developers. To add team members:
 
@@ -178,11 +178,11 @@ The Tometou project was developed by a team of developers. To add team members:
 3. Upload photo and add contact information
 4. Social media integration (Facebook, Instagram, Gmail)
 
-## 📝 License
+## License
 
 This project is for educational and demonstration purposes. Please respect user privacy and implement appropriate security measures for production use.
 
-## 🆘 Support
+## Support
 
 For technical support or questions about the Tometou platform, please contact the development team through the contact section on the website.
 
