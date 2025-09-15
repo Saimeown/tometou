@@ -3,6 +3,9 @@
 
 *"To me, to you" - Share your thoughts anonymously*
 
+![Demo](tometou.gif)
+
+
 ---
 
 ## Overview
